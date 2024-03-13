@@ -511,15 +511,15 @@ output_df
 # ## Loading the stored Model and using it for translation
 
 # %%
-ft_model_tokenizer = T5Tokenizer.from_pretrained("FineTunedTransformer")
-ft_model = T5ForConditionalGeneration.from_pretrained("FineTunedTransformer")
+# ft_model_tokenizer = T5Tokenizer.from_pretrained("FineTunedTransformer")
+# ft_model = T5ForConditionalGeneration.from_pretrained("FineTunedTransformer")
 
-# %%
-ft_prediction = []
+# # %%
+# ft_prediction = []
 
-for sentence in tqdm(x_test):
-    encoded_text = ft_model_tokenizer(sentence, return_tensors='pt', padding=True, truncation=True)
-    translated = ft_model.generate(**encoded_text,forced_bos_token_id=tokenizer.lang_code_to_id["te_IN"])
-    ft_prediction.append([tokenizer.decode(t, skip_special_tokens=True) for t in translated][0])
+# for sentence in tqdm(x_test):
+#     encoded_text = ft_model_tokenizer(sentence, return_tensors='pt', padding=True, truncation=True)
+#     translated = ft_model.generate(**encoded_text,forced_bos_token_id=tokenizer.lang_code_to_id["te_IN"])
+#     ft_prediction.append([tokenizer.decode(t, skip_special_tokens=True) for t in translated][0])
 
 
