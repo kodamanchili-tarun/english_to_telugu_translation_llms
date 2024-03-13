@@ -27,16 +27,6 @@ Our primary evaluation metric is the BLEU score.
 ## Data
 A data sample of 500 parallel sentences is available in the [`data`](./Data).
 
-## Citation
-@article{gala2023indictrans, 
-    title={IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages}, 
-    author={Jay Gala and Pranjal A Chitale and A K Raghavan and Varun Gumma and Sumanth Doddapaneni and Aswanth Kumar M and Janki Atul Nawale and Anupama Sujatha and Ratish Puduppully and Vivek Raghavan and Pratyush Kumar and Mitesh M Khapra and Raj Dabre and Anoop Kunchukuttan}, 
-    journal={Transactions on Machine Learning Research}, 
-    issn={2835-8856}, 
-    year={2023}, 
-    url={https://openreview.net/forum?id=vfT4YuzAYA}, 
-    note={}
-}
 
 ## Acknowledgements
 This project is contributed to by the following collaborators:
