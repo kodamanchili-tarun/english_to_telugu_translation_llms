@@ -15,7 +15,7 @@ We selected a subset of 60,000 parallel corpora from the available 5 million par
 [mBART50](https://arxiv.org/pdf/2008.00401.pdf) (Multilingual BART) is a multilingual extension of the BART (Bidirectional and Auto-Regressive Transformers) model. It is specifically designed for multilingual sequence-to-sequence tasks and demonstrates strong performance across various languages. By pretraining on multiple languages simultaneously, mBART learns a shared cross-lingual representation space, enabling effective transfer learning across languages.
 
 #### Fine-Tuning Process:
-For [fine-tuning mBART](https://huggingface.co/transformers/v4.7.0/model_doc/mbart.html) on our task, we utilized the Samanantar dataset. This dataset is rich in multilingual text data, making it suitable for training multilingual models like mBART. The fine-tuning process involves adapting the pretrained mBART model to our specific task by updating its parameters based on the Samanantar dataset. We have fine-tuned the model for only one epoch and were able to achieve a SacreBLEU score of approximately 9 using a batch size of 8, a learning rate of 5e-4, and the Adam optimizer. We set MAX_INPUT_LENGTH and MAX_TARGET_LENGTH to 128. The training stage took around 35 minutes for one epoch on one NVIDIA A100 GPU. We observed that training for more epochs could increase the quality of translation.
+For [fine-tuning mBART](https://huggingface.co/transformers/v4.7.0/model_doc/mbart.html) on our task, we utilized the Samanantar dataset. This dataset is rich in multilingual text data, making it suitable for training multilingual models like mBART. The fine-tuning process involves adapting the pretrained mBART model to our specific task by updating its parameters based on the Samanantar dataset. We have fine-tuned the model for only one epoch and were able to achieve a SacreBLEU score of approximately 9 using a batch size of 8, a learning rate of 5e-4, and the Adam optimizer. We set MAX_INPUT_LENGTH and MAX_TARGET_LENGTH to 128. The training stage took around 35 minutes for one epoch on one NVIDIA A100 GPU. We observed that training for more epochs could increase the quality of translation. The code is present here [link](./MBart50model.py)
 
 
 ### [MT5](https://arxiv.org/abs/2010.11934)
@@ -24,7 +24,7 @@ For [fine-tuning mBART](https://huggingface.co/transformers/v4.7.0/model_doc/mba
 MT5 (Multilingual T5) is a multilingual variant of the T5 (Text-To-Text Transfer Transformer) model, which is a powerful text-to-text transformer architecture. MT5 is designed to handle multilingual tasks, allowing for seamless processing of text in multiple languages within a single model. By pretraining on a diverse set of languages, MT5 learns to understand and generate text in various languages, enabling effective transfer learning across linguistic boundaries.
 
 #### Fine-Tuning Process:
-To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc/mt5) for our specific task, we followed a similar approach to the pretrained mBART model. We utilized a multilingual dataset suitable for our task and fine-tuned MT5 on this dataset. The fine-tuning process involves updating the parameters of the pretrained MT5 model based on the task-specific dataset, enabling the model to adapt its knowledge to our target task.
+To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc/mt5) for our specific task, we followed a similar approach to the pretrained mBART model. We utilized a multilingual dataset suitable for our task and fine-tuned MT5 on this dataset. The fine-tuning process involves updating the parameters of the pretrained MT5 model based on the task-specific dataset, enabling the model to adapt its knowledge to our target task.  The code is present here [link](./mT5model.py)
 
 
 ### [NLLB](https://arxiv.org/abs/2207.04672)
@@ -32,6 +32,8 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 1)Train split= 0.8 , test split = 0.2 on subset of Samanatar dataset 
 2)used Adam with initial lr= 2e-4 and batchsize of 8.
 3)epoch =1.
+
+  The code is present here [link](./NLLB_finetunedmodel.ipynb)
   
 
 ## Evaluation Metrics
