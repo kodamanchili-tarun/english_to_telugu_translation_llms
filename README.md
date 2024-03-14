@@ -23,6 +23,7 @@ For fine-tuning mBART on our task, we utilized the Samanantar dataset. This data
 - Any specific configurations
 
 ### NLLB
+For details about NLLB see - https://huggingface.co/facebook/nllb-200-distilled-600M
 - We fine-tuned this model after preprocessing unknown tokens in Telugu language on Samanantar dataset with configurations as follows:
 1)Train split= 0.8 , test split = 0.2 on subset of Samanatar dataset 
 2)used Adam with initial lr= 2e-4 and batchsize of 8.
