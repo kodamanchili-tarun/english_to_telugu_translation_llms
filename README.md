@@ -10,8 +10,13 @@ We selected a subset of 60,000 parallel corpora from the available 5 million par
 
 ## Models
 ### MBART50
-- Details about fine-tuning process
-- Any specific configurations
+
+#### Model Overview:
+mBART (Multilingual BART) is a multilingual extension of the BART (Bidirectional and Auto-Regressive Transformers) model. It is specifically designed for multilingual sequence-to-sequence tasks and demonstrates strong performance across various languages. By pretraining on multiple languages simultaneously, mBART learns a shared cross-lingual representation space, enabling effective transfer learning across languages.
+
+#### Fine-Tuning Process:
+For fine-tuning mBART on our task, we utilized the Samanantar dataset. This dataset is rich in multilingual text data, making it suitable for training multilingual models like mBART. The fine-tuning process involves adapting the pretrained mBART model to our specific task by updating its parameters based on the Samanantar dataset.
+
 
 ### MT5
 - Details about fine-tuning process
