@@ -6,7 +6,7 @@ This project focuses on translation from English to Telugu using the machine tra
 - MT5
 - NLLB
 
-We selected a subset of 60,000 parallel corpora from the available 5 million parallel corpora for our training data.
+We selected a subset of 60,000 parallel corpora from the available 5 million parallel corpora for our training data  and FLORES22 as evaluation set.
 
 ## Models
 ### MBART50
@@ -18,8 +18,11 @@ We selected a subset of 60,000 parallel corpora from the available 5 million par
 - Any specific configurations
 
 ### NLLB
-- Details about fine-tuning process
-- Any specific configurations
+- We fine-tuned this model after preprocessing unknown tokens in Telugu language on Samanantar dataset with configurations as follows:
+1)Train split= 0.8 , test split = 0.2 on subset of Samanatar dataset 
+2)used Adam with initial lr= 2e-4 and batchsize of 8.
+3)epoch =1.
+  
 
 ## Evaluation Metrics
 Our primary evaluation metric is the BLEU score.
