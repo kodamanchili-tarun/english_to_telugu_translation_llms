@@ -28,6 +28,7 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 
 
 ### [NLLB](https://arxiv.org/abs/2207.04672)
+- For details about NLLB see - https://huggingface.co/docs/transformers/en/model_doc/nllb
 - We [fine-tuned](https://discuss.huggingface.co/t/fine-tuning-nllb-model/31237) NLLB model after preprocessing unknown tokens in Telugu language on Samanantar dataset with configurations as follows:
 1)Train split= 0.8 , test split = 0.2 on subset of Samanatar dataset 
 2)used Adam with initial lr= 2e-4 and batchsize of 8.
