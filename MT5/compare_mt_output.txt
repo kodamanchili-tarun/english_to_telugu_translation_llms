@@ -1,0 +1,70 @@
+********************** Aggregate Scores ************************
+BLEU:
+	sys1
+BLEU	22.4547
+
+********************** Aggregate Scores ************************
+length ratio:
+	sys1
+length ratio	0.9479 (ref=48199, out=45687)
+
+Reading frequency from the reference
+********************** Word Accuracy Analysis ************************
+--- word fmeas by frequency bucket
+frequency	sys1
+<1	0.0000
+1	0.3713
+2	0.4488
+3	0.5122
+4	0.5155
+[5,10)	0.5574
+[10,100)	0.5543
+[100,1000)	0.6161
+>=1000	0.7448
+
+********************** Sentence Bucket Analysis ************************
+--- bucket type: length, statistic type: BLEU
+length	sys1
+<10	23.3808
+[10,20)	22.1478
+[20,30)	22.4301
+[30,40)	20.4857
+[40,50)	21.3550
+[50,60)	22.4186
+>=60	25.9409
+
+********************** Sentence Bucket Analysis ************************
+--- bucket type: len(output)-len(reference), statistic type: count
+lengthdiff	sys1
+<-20	0
+[-20,-10)	39
+[-10,-5)	194
+-5	107
+-4	127
+-3	219
+-2	296
+-1	331
+0	395
+1	263
+2	173
+3	115
+4	73
+5	41
+[6,11)	66
+[11,21)	8
+>=21	0
+
+********************** Sentence Bucket Analysis ************************
+--- bucket type: sentence-level BLEU, statistic type: count
+sentbleu	sys1
+<10.0	141
+[10.0,20.0)	857
+[20.0,30.0)	628
+[30.0,40.0)	379
+[40.0,50.0)	193
+[50.0,60.0)	101
+[60.0,70.0)	54
+[70.0,80.0)	31
+[80.0,90.0)	31
+>=90.0	32
+
