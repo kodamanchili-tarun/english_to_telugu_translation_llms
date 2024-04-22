@@ -40,8 +40,28 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 
  
 
-## Evaluation Metrics
-Our primary evaluation metric is the [SacreBLEU](https://github.com/mjpost/sacrebleu) score.
+# Evaluation Metrics for Machine Translation
+
+In this project, we consider various evaluation metrics to assess the performance of machine translation systems. These metrics provide insights into different aspects of translation quality, including fluency, adequacy, word-level accuracy, and sentence-level characteristics. The following metrics are considered:
+
+## 1. Aggregate Scores
+- **BLEU Score**: Measures the similarity between the candidate translation and reference translations using n-gram overlap.
+
+## 2. Word Accuracy Analysis
+- **F-measure by Frequency Bucket**: Evaluates the accuracy of word predictions based on the frequency of words in the reference translation.
+
+## 3. Sentence Bucket Analysis
+- **Bucketing Sentences**: Groups sentences based on various statistics such as sentence BLEU, length difference with the reference, and overall length.
+- **Statistics by Bucket**: Calculates statistics (e.g., number of sentences, BLEU score) for each bucket to analyze translation quality across different sentence characteristics.
+
+## 4. N-gram Difference Analysis
+- **Consistency of N-gram Translation**: Identifies which n-grams one system consistently translates better than the other.
+
+## 5. Sentence Examples
+- **Identifying Superior Translations**: Finds sentences where one system performs better than the other according to sentence BLEU.
+
+These evaluation metrics provide a comprehensive analysis of machine translation systems, enabling us to identify strengths and weaknesses and guide improvements in translation quality. They are valuable tools for researchers and developers working on machine translation models.
+
 
 ## Data
 A data sample of 500 parallel corpus of English and Telugu sentences  taken from [Samanantar](https://ai4bharat.iitm.ac.in/samanantar/) dataset  is available in the [`data`](./Data).
