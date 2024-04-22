@@ -35,7 +35,10 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 3)epoch =1.
 
   The code is present here [link](./NLLB_finetunedmodel.ipynb)
-  
+
+### [Llama-7B](https://arxiv.org/abs/2307.09288)
+
+ 
 
 ## Evaluation Metrics
 Our primary evaluation metric is the [SacreBLEU](https://github.com/mjpost/sacrebleu) score.
