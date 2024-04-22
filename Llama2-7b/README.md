@@ -1,14 +1,32 @@
+Certainly, here's an improved version of your README file:
+
+---
+
 # Fine-Tuning Llama-7b Model for Telugu Translation
 
-Welcome to the repository for fine-tuning the Llama-7b model for Telugu translation! This README will guide you through the file structure and steps to get started with fine-tuning and using the model for Telugu translation tasks.
+Welcome to the repository for fine-tuning the Llama-7b model for Telugu translation! This README will guide you through the file structure and steps to get started with fine-tuning and using the model for Telugu translation.
 
 ## File Structure
 
 The repository is organized into the following directories:
 
 1. **FineTuning**: Contains scripts and files related to fine-tuning the Llama-7b model for Telugu translation.
+
+   - `translate_alpaca_dataset_to_telugu.py`: Translates the Alpaca dataset used for fine-tuning into Telugu.
+   - `finetune.py`: Code for supervised fine-tuning after loading the Pretrained model either from local storage or Hugging Face.
+
 2. **Pretraining**: Includes any pretraining scripts or resources used for the Llama-7b model.
+
+   - `download_base_model`: Downloads the base model from Hugging Face for pretraining.
+   - `script.sh`: Pretraining parameter arguments script.
+   - `run_pretraining.py`: Code for PreTraining the downloaded model on the datasets.
+   - `merge_lora_with_llama.py`: Merges the learned weights from lightweight finetuning (LORA) with the original model.
+
 3. **Tokenizer**: Contains scripts or files related to tokenization specific to Telugu language.
+
+   - `tokenizer.py`: Scrapes tokens from the specified dataset using the Sentence Piece Trainer.
+   - `merge_tokenizer.py`: Merges the tokens scraped above with the original downloaded model.
+
 4. **requirements.txt**: Lists the dependencies and libraries required to run the code successfully.
 
 ## Getting Started
@@ -27,14 +45,22 @@ To get started with fine-tuning the Llama-7b model for Telugu translation, follo
    cd llama-7b-telugu-translation
    pip install -r requirements.txt
    ```
+3. **Prepare Data**: Create a folder named 'data' and add the datasets you want to pretrain and fine-tune on.
 
-3. **Fine-Tune the Model**: Use the scripts provided in the `FineTuning` directory to fine-tune the Llama-7b model for Telugu translation. Follow any specific instructions provided in that directory.
+4. **Tokenization (Optional)**: If you need custom tokenization for Telugu language:
+   - Run `python tokenizer.py`
+   - Run `python merge_tokenizer.py`
 
-4. **Tokenization**: If you need custom tokenization for Telugu language, refer to the scripts in the `Tokenizer` directory.
+5. **Pretraining (Optional)**: If you want to perform pretraining on the Llama-7b model:
+   - Run `python download_base_llama2-7b-hf.py`
+   - Run `./script.sh` (This will execute `run_pretrain.py` and perform pretraining)
+   - Run `python merge_lora_with_llama.py`
+   
+6. **Fine-Tune the Model**: Use the scripts provided in the `FineTuning` directory to fine-tune the Llama-7b model for Telugu translation:
+   - Run `python translate_alpaca_dataset_to_telugu.py`
+   - Run `python finetune.py`
 
-5. **Pretraining (Optional)**: If you wish to explore pretraining aspects related to the Llama-7b model, check the resources and scripts in the `Pretraining` directory.
-
-6. **Usage**: Once fine-tuned, you can use the model for Telugu translation tasks. Refer to the documentation or scripts in the `FineTuning` directory for usage instructions.
+7. **Usage**: Once fine-tuned, you can use the model for Telugu translation tasks. Ensure you publish it to Hugging Face or follow specific deployment instructions.
 
 ## Contributing
 
