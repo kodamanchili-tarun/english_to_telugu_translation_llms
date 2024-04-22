@@ -1,7 +1,3 @@
-Certainly, here's an improved version of your README file:
-
----
-
 # Fine-Tuning Llama-7b Model for Telugu Translation
 
 Welcome to the repository for fine-tuning the Llama-7b model for Telugu translation! This README will guide you through the file structure and steps to get started with fine-tuning and using the model for Telugu translation.
