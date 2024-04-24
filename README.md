@@ -47,7 +47,7 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 - PreTraining and fine-tuning phase is happened in a lightweight finetuning paradigm called LoRA.
 
 The Llama model is initially loaded in an 8-bit quantization format, which offers efficiency in terms of memory usage. Moreover, it has been demonstrated that this quantization method does not significantly compromise the model’s performance.
-
+For more details about Llama-7B - https://huggingface.co/meta-llama/Llama-2-7b
  
 
 # Evaluation Metrics for Machine Translation
