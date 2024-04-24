@@ -42,6 +42,12 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
 -  We hypothesized that a bottleneck in performance could occur for low-resource languages like Telugu due to the tokenizer. The Llama tokenizer had a vocabulary size of 32k tokens, with fewer tokens dedicated to low-resource languages like Telugu. we observed that each Telugu word was divided into an average of 20.03 tokens in the Samanantar dataset which is worse, whereas only 1.6 for English. To address this, we added 20k new quality tokens to the Llama tokenizer, sourced from the Telugu version of CulturaX.
 - we used the Sentence Piece tokenizer on the CulturaX dataset for generating new quality tokens. these tokens were then integrated into the Llama tokenizer, and the Llama pretrained model embedding layer and softmax layers were resized accordingly.
 
+#### Fine-Tuning Process
+- For fine-tuning we have considered the alpaca dataset, which typically consists of the following format Instruction,input,response.
+- PreTraining and fine-tuning phase is happened in a lightweight finetuning paradigm called LoRA.
+
+The Llama model is initially loaded in an 8-bit quantization format, which offers efficiency in terms of memory usage. Moreover, it has been demonstrated that this quantization method does not significantly compromise the model’s performance.
+
  
 
 # Evaluation Metrics for Machine Translation
