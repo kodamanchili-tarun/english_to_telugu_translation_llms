@@ -72,24 +72,14 @@ A data sample of 500 parallel corpus of English and Telugu sentences  taken from
 
 
 ## Conclusion and Future Work
-As of now  we have exploited the transformer models like mBART50 , NLLB , mT5  and
-have fine tuned the models using 60000 training samples taken from samanantar dataset
-and was able to acheive decent BLEU score.For the training we trained the model with 1
-epoch.
+In this project, we have exploited LLMs like Llama2, mBART50, NLLB and mt5 and tried fine-tuning the models effectively using a small training size of 60000 samples taken from the Samanantar dataset and were able to obtain a decent increase in BLEU score. We have observed repeating the pretraining step can help LLMs to perform better than direct finetuning while using custom tokenizers. We have observed the importance of data that is been used for fine-tuning setup to build better models. We have found that LLMs have the potential
+to perform translations involving English and
+Telugu , which distinguishes
+them from traditional translation models. Particularly, LLaMA-2 based models exhibit superior performance in zero-shot and in-context example-based learning, highlighting their effectiveness in cross-lingual tasks.
 
-For future work, we plan to delve deeper into the exploration of additional pre-trained
-large language models (LLMs), such as LLaMA2, coupled with [LoRA fine-tuning](https://arxiv.org/abs/2106.09685)
-techniques. This approach aims to further enhance the performance of our translation
-models by exploiting the strengths of diverse pre-trained architectures.
-Additionally, we intend to experiment with training our models using custom tokenization
-strategies specially designed to the characteristics of the English to Telugu translation
-task. By adapting tokenization of the target language, we anticipate improvements in
-translation accuracy and efficiency. Furthermore, we aim to augment our training dataset
-by increasing the number of samples, thereby providing the model with a richer and more
-diverse set of contexts to learn from. We will try to train the model with more no of epochs
-for increasing the performance of the model. We will also consider different metrics like
-ChrF++ ,ROUGE score  for evaluation the quality of translation
+For future work, one can anticipate achieving greater performance enhancements by obtaining higher-quality training data and conducting meticulous training sessions with careful hyperparameter tuning.One can aim to boost performance by training on the complete Samanantar dataset (50,00,000 examples) and exploring one-shot or few-shot tuning of Llama3-8b, a chat-based model, to enhance Telugu translations. Additionally, expanding the Telugu tokenizer to include more tokens can augment the number of available tokens, potentially enhancing the model's ability to capture finer linguistic nuances and improve translation accuracy.
 
+One can aim to explore pre-training on Indic language monolingual corpora from IndicCorp and develop a single-script mT5- or mBART-like model for Indic languages. Subsequently, fine-tuning on machine translation tasks using the Samanantar dataset can lead to more effective translation models tailored to Indic languages.And also one can explore various data filtering techniques and data sampling methods  to assess their impact on the performance of the Machine Translation (MT) model during training. For instance, one can aim to experiment with sorting data sources by quality and selectively feeding sentences from high-quality sources in later epochs of training to enhance model performance.
 
 
 ## Acknowledgements
