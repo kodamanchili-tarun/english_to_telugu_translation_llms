@@ -5,6 +5,7 @@ This project focuses on translation from English to Telugu using the machine tra
 - MBART50
 - MT5
 - NLLB
+- Llama-7B
 
 We selected a subset of 60,000 parallel corpora from the available 5 million parallel corpora for our training data  and FLORES22 as evaluation set.
 
@@ -37,6 +38,9 @@ To [fine-tune MT5](https://huggingface.co/docs/transformers/v4.14.1/en/model_doc
   The code is present here [link](./NLLB_finetunedmodel.ipynb)
 
 ### [Llama-7B](https://arxiv.org/abs/2307.09288)
+- Llama 2 is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. This is the repository for the 7B pretrained model.
+-  We hypothesized that a bottleneck in performance could occur for low-resource languages like Telugu due to the tokenizer. The Llama tokenizer had a vocabulary size of 32k tokens, with fewer tokens dedicated to low-resource languages like Telugu. we observed that each Telugu word was divided into an average of 20.03 tokens in the Samanantar dataset which is worse, whereas only 1.6 for English. To address this, we added 20k new quality tokens to the Llama tokenizer, sourced from the Telugu version of CulturaX.
+- we used the Sentence Piece tokenizer on the CulturaX dataset for generating new quality tokens. these tokens were then integrated into the Llama tokenizer, and the Llama pretrained model embedding layer and softmax layers were resized accordingly.
 
  
 
