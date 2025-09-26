@@ -92,9 +92,7 @@ One can aim to explore pre-training on Indic language monolingual corpora from I
 ## Acknowledgements
 This project is contributed to by the following collaborators:
 
-- [Alokam Gnaneswara Sai](https://github.com/alokamgnaneswarasai)
-- [Onteru Prabhas Reddy](https://github.com/prabhas2002)
-- [Pallekonda Naveen Kumar](https://github.com/PNaveenKumar1)
+- [Kodamanchili Tarun](https://github.com/kodamanchili-tarun)
 
 
 ## References 
