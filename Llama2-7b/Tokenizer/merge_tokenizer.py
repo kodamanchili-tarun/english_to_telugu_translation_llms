@@ -7,7 +7,6 @@ from sentencepiece import sentencepiece_model_pb2 as sp_pb2_model
 from transformers import LlamaTokenizer
 
 from huggingface_hub import login
-# login(token="") #replace it with your own token
 
 ### load
 telugu_sp_model_file = "TeluguLLM.model"
